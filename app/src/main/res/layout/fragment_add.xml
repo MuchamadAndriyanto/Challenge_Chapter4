@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".AddFragment">
+
+    <EditText
+        android:id="@+id/noteTitle"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
+        android:hint="Tambahkan Judul Anda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/noteContent"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
+        android:hint="Tambahkan Catatan Anda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnSaveNote"
+        android:backgroundTint="@color/teal_700"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
