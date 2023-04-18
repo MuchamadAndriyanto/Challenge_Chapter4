@@ -64,7 +64,7 @@ class EditFragment : Fragment() {
             var edit = dbNote?.noteDao()?.updateNote(NoteData(idNote, title, note))
 
         }
-        Toast.makeText(requireContext(), "Data berhasil di Edit", Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), "Data Berhasil di Edit", Toast.LENGTH_LONG).show()
         findNavController().navigate(R.id.action_editFragment_to_homeFragment)
     }
 

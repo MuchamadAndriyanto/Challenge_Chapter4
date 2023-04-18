@@ -1,5 +1,7 @@
 package com.example.challengechap4
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.challengechap4.databinding.FragmentHomeBinding
@@ -23,6 +26,7 @@ class HomeFragment : Fragment() {
     var NoteDB : NoteDataBase? = null
     lateinit var adapterNote : NoteAdapter
     lateinit var noteViewModel : NoteViewModel
+    lateinit var dataPref : SharedPreferences
 
 
     override fun onCreateView(
@@ -36,6 +40,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        super.onViewCreated(view, savedInstanceState)
+        dataPref= requireContext().getSharedPreferences("dataregistrasi", Context.MODE_PRIVATE)
+        _binding?.tvHello?.text = "Hello,  " + dataPref.getString("nama", "name")
+
         NoteDB = NoteDataBase.getInstance(requireContext())
 
         noteVm()
@@ -48,6 +56,12 @@ class HomeFragment : Fragment() {
 
         binding.btnAdd.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_addFragment)
+        }
+        binding.btnLogout.setOnClickListener {
+            val dataPref = dataPref.edit()
+            dataPref.clear()
+            dataPref.apply()
+            Navigation.findNavController(requireView()).navigate(R.id.action_homeFragment_to_loginFragment)
         }
 
     }

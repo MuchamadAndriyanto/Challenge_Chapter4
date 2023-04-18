@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterFragment">
+
+    <ImageView
+        android:id="@+id/gojekIcReg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/baseline_app_registration_24"/>
+
+    <TextView
+        android:id="@+id/vRegistscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gojekIcReg"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="Register"
+        android:textSize="34sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/maison_bold"/>
+
+
+    <EditText
+        android:id="@+id/regname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vRegistscreen"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:fontFamily="@font/maison_light"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/regUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regname"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="username"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/maison_light"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/regPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regUsername"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/maison_light"
+        android:hint="password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:fontFamily="@font/maison_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/regPassword"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="register" />
+</RelativeLayout>

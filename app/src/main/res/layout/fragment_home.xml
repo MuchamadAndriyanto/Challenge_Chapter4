@@ -8,8 +8,17 @@
     android:padding="20dp"
     tools:context=".HomeFragment">
 
+    <TextView
+        android:id="@+id/tvHello"
+        android:fontFamily="@font/maison_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello,"
+        android:textSize="25sp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNote"
+        android:layout_below="@+id/tvHello"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -21,5 +30,16 @@
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/purple_500"
+        android:fontFamily="@font/maison_bold"
+        android:text="logout" />
 
 </RelativeLayout>
