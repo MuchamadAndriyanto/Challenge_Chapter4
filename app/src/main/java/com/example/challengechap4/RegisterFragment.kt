@@ -30,9 +30,9 @@ class RegisterFragment : Fragment() {
         pref = requireContext().getSharedPreferences("dataregistrasi", Context.MODE_PRIVATE)
 
         binding.btnRegister.setOnClickListener {
-            val name = binding.regname.text.toString()
-            val username = binding.regUsername.text.toString()
-            val password = binding.regPassword.text.toString()
+            val name = binding.etName.text.toString()
+            val username = binding.etUsername.text.toString()
+            val password = binding.etPassword.text.toString()
 
             val regist = pref.edit()
             regist.putString("nama", name)

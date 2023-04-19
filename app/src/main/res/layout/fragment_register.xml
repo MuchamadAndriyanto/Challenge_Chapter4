@@ -3,21 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".RegisterFragment">
 
     <ImageView
-        android:id="@+id/gojekIcReg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:id="@+id/iconNote"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:src="@drawable/baseline_app_registration_24"/>
+        android:src="@drawable/icon"/>
 
     <TextView
-        android:id="@+id/vRegistscreen"
+        android:id="@+id/tvRegistrasi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gojekIcReg"
+        android:layout_below="@id/iconNote"
         android:gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:text="Register"
@@ -27,10 +28,12 @@
 
 
     <EditText
-        android:id="@+id/regname"
+        android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/vRegistscreen"
+        android:layout_below="@+id/tvRegistrasi"
+        android:fontFamily="@font/maison_light"
+        android:textColorHint="@color/black"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -38,32 +41,33 @@
         android:hint="name"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:fontFamily="@font/maison_light"
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/regUsername"
+        android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/regname"
+        android:layout_below="@+id/etName"
+        android:fontFamily="@font/maison_light"
+        android:textColorHint="@color/black"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:hint="username"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
-        android:fontFamily="@font/maison_light"
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/regPassword"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/regUsername"
+        android:layout_below="@+id/etUsername"
+        android:fontFamily="@font/maison_light"
+        android:textColorHint="@color/black"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:fontFamily="@font/maison_light"
         android:hint="password"
         android:importantForAutofill="no"
         android:inputType="textPassword"
@@ -71,15 +75,15 @@
 
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btnRegister"
         android:fontFamily="@font/maison_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/regPassword"
+        android:layout_below="@id/etPassword"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/purple_500"
+        android:backgroundTint="@color/teal_700"
         android:text="register" />
 </RelativeLayout>

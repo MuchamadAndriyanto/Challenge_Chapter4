@@ -34,8 +34,8 @@ class LoginFragment : Fragment() {
             var getUsername = dataPref.getString("username", "")
             var getPassword = dataPref.getString("password", "")
 
-            var username = binding.logUsername.text.toString()
-            var password = binding.logPassword.text.toString()
+            var username = binding.etUsername.text.toString()
+            var password = binding.etPassword.text.toString()
 
             if (username == getUsername && password.equals(getPassword)) {
                 Navigation.findNavController(view)

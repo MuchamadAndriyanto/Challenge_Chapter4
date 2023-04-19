@@ -40,24 +40,24 @@ class EditFragment : Fragment() {
         }
 
         if (getNoteData != null) {
-            binding.editTittle.setText(getNoteData.title)
+            binding.etTitle.setText(getNoteData.title)
         }
         if (getNoteData != null) {
-            binding.editNotee.setText(getNoteData.content)
+            binding.etContent.setText(getNoteData.content)
         }
         if (getNoteData != null) {
-            binding.idNote.setText(getNoteData.id.toString())
+            binding.etId.setText(getNoteData.id.toString())
         }
 
-        binding.btnEditNote.setOnClickListener {
+        binding.btnEdit.setOnClickListener {
             editNote()
         }
     }
 
     fun editNote() {
-        var idNote = binding.idNote.text.toString().toInt()
-        var title = binding.editTittle.text.toString()
-        var note = binding.editNotee.text.toString()
+        var idNote = binding.etId.text.toString().toInt()
+        var title = binding.etTitle.text.toString()
+        var note = binding.etContent.text.toString()
 
 
         GlobalScope.async {
