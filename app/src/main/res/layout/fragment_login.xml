@@ -22,7 +22,7 @@
         android:layout_below="@+id/iconNote"
         android:gravity="center_horizontal"
         android:text="Login"
-        android:fontFamily="@font/maison_light"
+        android:fontFamily="@font/maison_bold"
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold" />

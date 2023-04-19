@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
         dataPref= requireContext().getSharedPreferences("dataregistrasi", Context.MODE_PRIVATE)
-        _binding?.tvHello?.text = "Hello,  " + dataPref.getString("nama", "name")
+        _binding?.tvWelcome?.text = "Welcome,  " + dataPref.getString("nama", "name")
 
         NoteDB = NoteDataBase.getInstance(requireContext())
 
