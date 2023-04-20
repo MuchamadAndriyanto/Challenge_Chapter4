@@ -18,6 +18,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNote"
         android:layout_below="@+id/tvWelcome"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -31,15 +32,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="5dp"
+        android:layout_alignParentRight="true"
         android:backgroundTint="@color/teal_700"
-        android:fontFamily="@font/maison_bold"
-        android:text="Logout" />
+        android:src="@drawable/baseline_logout_24"
+        android:layout_marginTop="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

@@ -71,18 +71,6 @@ class HomeFragment : Fragment() {
         binding.rvNote.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.rvNote.adapter = adapterNote
     }
-    fun getAllNote(){
-
-        GlobalScope.launch {
-            var data = NoteDB?.noteDao()?.getDataNote()
-            activity?.runOnUiThread{
-                adapterNote = NoteAdapter(data!!)
-                binding.rvNote.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                binding.rvNote.adapter = adapterNote
-            }
-        }
-
-    }
 
     override fun onStart() {
         super.onStart()
@@ -90,10 +78,12 @@ class HomeFragment : Fragment() {
         GlobalScope.launch {
             var data = NoteDB?.noteDao()?.getDataNote()
 
-            adapterNote = NoteAdapter(data!!)
-            binding.rvNote.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-            binding.rvNote.adapter = adapterNote
-
+            activity?.runOnUiThread {
+                adapterNote = NoteAdapter(data!!)
+                binding.rvNote.layoutManager =
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+                binding.rvNote.adapter = adapterNote
+            }
         }
     }
 

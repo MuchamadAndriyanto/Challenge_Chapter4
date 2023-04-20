@@ -12,7 +12,8 @@ import androidx.navigation.Navigation
 import com.example.challengechap4.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
-    lateinit var binding: FragmentLoginBinding
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
     lateinit var dataPref: SharedPreferences
 
     override fun onCreateView(
@@ -20,7 +21,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -38,8 +39,7 @@ class LoginFragment : Fragment() {
             var password = binding.etPassword.text.toString()
 
             if (username == getUsername && password.equals(getPassword)) {
-                Navigation.findNavController(view)
-                    .navigate(R.id.action_loginFragment_to_homeFragment)
+                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homeFragment)
             } else {
                 Toast.makeText(context, "Username atau password anda salah !", Toast.LENGTH_SHORT)
                     .show()

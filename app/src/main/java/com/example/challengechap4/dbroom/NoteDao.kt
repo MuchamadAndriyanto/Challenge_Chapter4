@@ -13,7 +13,7 @@ interface NoteDao {
     fun insertNote(noteData: NoteData)
 
     @Query("SELECT * FROM NoteData ORDER BY id ASC ")
-    fun getDataNote() : List<NoteData >
+    fun getDataNote() : List<NoteData>
 
     @Delete
     fun deleteNote(note: NoteData )

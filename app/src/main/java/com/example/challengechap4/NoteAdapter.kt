@@ -42,10 +42,10 @@ class NoteAdapter(var listNote : List<NoteData>): RecyclerView.Adapter<NoteAdapt
             GlobalScope.async {
                 val del = DBNote?.noteDao()?.deleteNote(listNote[position])
                 (holder.itemView.context as HomeFragment).activity?.runOnUiThread{
-                    (holder.itemView.context as HomeFragment).getAllNote()
+                    (holder.itemView.context as HomeFragment)
                 }
             }
-            Toast.makeText(it.context, "Data Berhasil Di Hapus", Toast.LENGTH_SHORT).show()
+            Toast.makeText(it.context, "Data Berhasil di Hapus", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(it).navigate(R.id.homeFragment)
         }
     }
